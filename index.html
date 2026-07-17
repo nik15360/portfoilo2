@@ -14,7 +14,7 @@
 <style>
 
 /* =====================
-   RESET
+ RESET
 ===================== */
 
 *{
@@ -25,22 +25,24 @@
 }
 
 
+
 /* =====================
-   PASTEL YELLOW BACKGROUND
+ BACKGROUND
 ===================== */
 
 body{
 
     min-height:100vh;
 
-    background:#FFF9DB;
+    overflow:hidden;
 
-    overflow-x:hidden;
+    background:#eadcff;
 
 }
 
 
-/* Pastel Glow */
+
+/* แสงพาสเทล */
 
 body::before{
 
@@ -48,11 +50,11 @@ body::before{
 
     position:fixed;
 
-    width:450px;
+    width:400px;
 
-    height:450px;
+    height:400px;
 
-    background:#FFF3B0;
+    background:#fbcfe8;
 
     border-radius:50%;
 
@@ -60,11 +62,10 @@ body::before{
 
     top:-150px;
 
-    left:-120px;
-
-    z-index:-1;
+    left:-100px;
 
 }
+
 
 
 body::after{
@@ -73,11 +74,11 @@ body::after{
 
     position:fixed;
 
-    width:450px;
+    width:400px;
 
-    height:450px;
+    height:400px;
 
-    background:#FFE8A3;
+    background:#ddd6fe;
 
     border-radius:50%;
 
@@ -85,15 +86,14 @@ body::after{
 
     bottom:-150px;
 
-    right:-120px;
-
-    z-index:-1;
+    right:-100px;
 
 }
 
 
+
 /* =====================
-   MENU
+ MENU
 ===================== */
 
 nav{
@@ -106,34 +106,44 @@ nav{
 
     transform:translateX(-50%);
 
+
     width:90%;
+
 
     display:flex;
 
     justify-content:center;
 
-    flex-wrap:wrap;
+    gap:25px;
 
-    gap:20px;
 
     padding:18px;
 
-    background:rgba(255,255,255,.55);
+
+    background:rgba(255,255,255,.45);
 
     backdrop-filter:blur(15px);
 
+
     border-radius:50px;
 
-    box-shadow:0 10px 30px rgba(194,139,0,.15);
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,.1);
+
+
+    z-index:10;
 
 }
+
 
 
 nav a{
 
     text-decoration:none;
 
-    color:#B88600;
+    color:#7c3aed;
 
     font-weight:600;
 
@@ -142,142 +152,373 @@ nav a{
 }
 
 
+
 nav a:hover{
 
-    color:#E6A700;
-
-}
-
-
-/* =====================
-   GLASS CARD
-===================== */
-
-.container,
-.profile-box,
-.card{
-
-    background:rgba(255,255,255,.55);
-
-    backdrop-filter:blur(20px);
-
-    border-radius:35px;
-
-    box-shadow:
-
-    0 20px 50px rgba(194,139,0,.18);
-
-}
-
-
-/* =====================
-   IMAGE
-===================== */
-
-.profile{
-
-    border:7px solid white;
-
-    box-shadow:
-
-    0 0 30px #FFD54F;
-
-}
-
-
-/* =====================
-   TEXT
-===================== */
-
-
-h1{
-
-    color:#B88600;
-
-}
-
-
-h2{
-
-    color:#D89B00;
-
-}
-
-
-h3{
-
-    color:#D89B00;
-
-}
-
-
-p{
-
-    color:#7A5B00;
+    color:#ec4899;
 
 }
 
 
 
 /* =====================
-   BUTTON
-===================== */
-
-
-button{
-
-    background:
-
-    linear-gradient(
-
-    45deg,
-
-    #FFE082,
-
-    #FFD54F
-
-    );
-
-    color:#6B4F00;
-
-    border:none;
-
-    padding:15px 45px;
-
-    border-radius:50px;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-    box-shadow:
-
-    0 8px 20px rgba(255,193,7,.35);
-
-}
-
-
-button:hover{
-
-    transform:translateY(-5px);
-
-}
-
-
-/* =====================
-   DECORATION
+ ดาวตก
 ===================== */
 
 
 .star{
 
-    color:#FBBF24;
+    position:fixed;
+
+    top:-50px;
+
+
+    color:#ffffff;
+
+
+    opacity:.45;
+
 
     text-shadow:
 
-    0 0 10px #FFE082;
+    0 0 8px white;
+
+
+    animation:fall linear infinite;
+
+
+    z-index:1;
 
 }
+
+
+
+@keyframes fall{
+
+
+0%{
+
+    transform:
+
+    translateY(-50px)
+    rotate(0deg);
+
+}
+
+
+100%{
+
+    transform:
+
+    translateY(110vh)
+    rotate(360deg);
+
+}
+
+
+}
+
+
+
+/* =====================
+ HERO
+===================== */
+
+
+.hero{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+
+/* =====================
+ PROFILE BOX
+===================== */
+
+
+.profile-box{
+
+
+    width:500px;
+
+
+    padding:45px;
+
+
+    text-align:center;
+
+
+    background:
+
+    rgba(255,255,255,.45);
+
+
+    backdrop-filter:blur(20px);
+
+
+    border-radius:35px;
+
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.15);
+
+
+    animation:show 1s;
+
+}
+
+
+
+@keyframes show{
+
+
+from{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+}
+
+
+
+/* =====================
+ IMAGE
+===================== */
+
+
+.profile{
+
+
+    width:200px;
+
+
+    height:200px;
+
+
+    object-fit:cover;
+
+
+    border-radius:50%;
+
+
+    border:7px solid white;
+
+
+    box-shadow:
+
+    0 0 30px #f472b6;
+
+
+    animation:float 3s infinite;
+
+}
+
+
+
+@keyframes float{
+
+
+50%{
+
+    transform:translateY(-15px);
+
+}
+
+
+}
+
+
+
+/* =====================
+ TEXT
+===================== */
+
+
+h1{
+
+    margin-top:25px;
+
+
+    font-size:60px;
+
+
+    color:#7c3aed;
+
+
+}
+
+
+
+h2{
+
+
+    margin-top:10px;
+
+
+    font-size:30px;
+
+
+    color:#ec4899;
+
+
+}
+
+
+
+p{
+
+
+    margin:20px;
+
+
+    color:#555;
+
+
+    font-size:18px;
+
+
+    line-height:1.8;
+
+
+}
+
+
+
+/* =====================
+ BUTTON
+===================== */
+
+
+button{
+
+
+    padding:15px 45px;
+
+
+    border:none;
+
+
+    border-radius:50px;
+
+
+    background:
+
+    linear-gradient(
+    45deg,
+    #ec4899,
+    #8b5cf6
+    );
+
+
+    color:white;
+
+
+    font-size:18px;
+
+
+    font-weight:bold;
+
+
+    cursor:pointer;
+
+
+    transition:.3s;
+
+}
+
+
+
+button:hover{
+
+
+    transform:translateY(-5px) scale(1.05);
+
+
+}
+
+
+
+/* =====================
+ MOBILE
+===================== */
+
+
+@media(max-width:700px){
+
+
+nav{
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+
+nav a{
+
+    font-size:13px;
+
+}
+
+
+
+.profile-box{
+
+    width:90%;
+
+    padding:30px;
+
+}
+
+
+
+.profile{
+
+    width:150px;
+
+    height:150px;
+
+}
+
+
+
+h1{
+
+    font-size:40px;
+
+}
+
+
+}
+
 
 </style>
 
