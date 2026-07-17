@@ -528,3 +528,20 @@ button:hover{
     }
 
 }
+<div id="flowers">
+
+    <div class="flower" style="left:5%;animation-duration:12s;">🌸</div>
+
+    <div class="flower" style="left:18%;animation-duration:16s;font-size:55px;">🌼</div>
+
+    <div class="flower" style="left:32%;animation-duration:14s;">🌷</div>
+
+    <div class="flower" style="left:47%;animation-duration:18s;font-size:60px;">🌺</div>
+
+    <div class="flower" style="left:60%;animation-duration:15s;">🌸</div>
+
+    <div class="flower" style="left:74%;animation-duration:20s;">🌼</div>
+
+    <div class="flower" style="left:88%;animation-duration:13s;">🌷</div>
+
+</div>
