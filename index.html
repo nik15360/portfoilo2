@@ -14,7 +14,7 @@
 <style>
 
 /* =====================
- RESET
+   RESET
 ===================== */
 
 *{
@@ -25,24 +25,22 @@
 }
 
 
-
 /* =====================
- BACKGROUND
+   PASTEL YELLOW BACKGROUND
 ===================== */
 
 body{
 
     min-height:100vh;
 
-    overflow:hidden;
-
     background:#FFF9DB;
+
+    overflow-x:hidden;
 
 }
 
 
-
-/* แสงพาสเทล */
+/* Pastel Glow */
 
 body::before{
 
@@ -50,9 +48,9 @@ body::before{
 
     position:fixed;
 
-    width:400px;
+    width:450px;
 
-    height:400px;
+    height:450px;
 
     background:#FFF3B0;
 
@@ -62,10 +60,11 @@ body::before{
 
     top:-150px;
 
-    left:-100px;
+    left:-120px;
+
+    z-index:-1;
 
 }
-
 
 
 body::after{
@@ -74,9 +73,9 @@ body::after{
 
     position:fixed;
 
-    width:400px;
+    width:450px;
 
-    height:400px;
+    height:450px;
 
     background:#FFE8A3;
 
@@ -86,14 +85,15 @@ body::after{
 
     bottom:-150px;
 
-    right:-100px;
+    right:-120px;
+
+    z-index:-1;
 
 }
 
 
-
 /* =====================
- MENU
+   MENU
 ===================== */
 
 nav{
@@ -106,44 +106,34 @@ nav{
 
     transform:translateX(-50%);
 
-
     width:90%;
-
 
     display:flex;
 
     justify-content:center;
 
-    gap:25px;
+    flex-wrap:wrap;
 
+    gap:20px;
 
     padding:18px;
 
-
-    background:rgba(255,255,255,.45);
+    background:rgba(255,255,255,.55);
 
     backdrop-filter:blur(15px);
 
-
     border-radius:50px;
 
-
-    box-shadow:
-
-    0 10px 30px rgba(0,0,0,.1);
-
-
-    z-index:10;
+    box-shadow:0 10px 30px rgba(194,139,0,.15);
 
 }
-
 
 
 nav a{
 
     text-decoration:none;
 
-    color:#C28B00;
+    color:#B88600;
 
     font-weight:600;
 
@@ -152,373 +142,142 @@ nav a{
 }
 
 
-
 nav a:hover{
 
-    color:#E8A317;
+    color:#E6A700;
 
 }
-
 
 
 /* =====================
- ดาวตก
+   GLASS CARD
 ===================== */
 
+.container,
+.profile-box,
+.card{
 
-.star{
-
-    position:fixed;
-
-    top:-50px;
-
-
-    color:##FBBF24;
-
-
-    opacity:.45;
-
-
-    text-shadow:
-
-    0 0 8px white;
-
-
-    animation:fall linear infinite;
-
-
-    z-index:1;
-
-}
-
-
-
-@keyframes fall{
-
-
-0%{
-
-    transform:
-
-    translateY(-50px)
-    rotate(0deg);
-
-}
-
-
-100%{
-
-    transform:
-
-    translateY(110vh)
-    rotate(360deg);
-
-}
-
-
-}
-
-
-
-/* =====================
- HERO
-===================== */
-
-
-.hero{
-
-    height:100vh;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-
-    position:relative;
-
-    z-index:2;
-
-}
-
-
-
-/* =====================
- PROFILE BOX
-===================== */
-
-
-.profile-box{
-
-
-    width:500px;
-
-
-    padding:45px;
-
-
-    text-align:center;
-
-
-    background:
-
-    rgba(255,255,255,.45);
-
+    background:rgba(255,255,255,.55);
 
     backdrop-filter:blur(20px);
 
-
     border-radius:35px;
-
 
     box-shadow:
 
-    0 20px 50px rgba(0,0,0,.15);
-
-
-    animation:show 1s;
+    0 20px 50px rgba(194,139,0,.18);
 
 }
-
-
-
-@keyframes show{
-
-
-from{
-
-    opacity:0;
-
-    transform:translateY(60px);
-
-}
-
-
-to{
-
-    opacity:1;
-
-    transform:translateY(0);
-
-}
-
-
-}
-
 
 
 /* =====================
- IMAGE
+   IMAGE
 ===================== */
-
 
 .profile{
 
-
-    width:200px;
-
-
-    height:200px;
-
-
-    object-fit:cover;
-
-
-    border-radius:50%;
-
-
     border:7px solid white;
-
 
     box-shadow:
 
-    0 0 30px ##FFD54F;
-
-
-    animation:float 3s infinite;
+    0 0 30px #FFD54F;
 
 }
-
-
-
-@keyframes float{
-
-
-50%{
-
-    transform:translateY(-15px);
-
-}
-
-
-}
-
 
 
 /* =====================
- TEXT
+   TEXT
 ===================== */
 
 
 h1{
 
-    margin-top:25px;
-
-
-    font-size:60px;
-
-
-    color:#7c3aed;
-
+    color:#B88600;
 
 }
-
 
 
 h2{
 
-
-    margin-top:10px;
-
-
-    font-size:30px;
-
-
-    color:#ec4899;
-
+    color:#D89B00;
 
 }
 
 
+h3{
+
+    color:#D89B00;
+
+}
+
 
 p{
 
-
-    margin:20px;
-
-
-    color:#555;
-
-
-    font-size:18px;
-
-
-    line-height:1.8;
-
+    color:#7A5B00;
 
 }
 
 
 
 /* =====================
- BUTTON
+   BUTTON
 ===================== */
 
 
 button{
 
-
-    padding:15px 45px;
-
-
-    border:none;
-
-
-    border-radius:50px;
-
-
     background:
 
     linear-gradient(
+
     45deg,
-    #ec4899,
-    #8b5cf6
+
+    #FFE082,
+
+    #FFD54F
+
     );
 
+    color:#6B4F00;
 
-    color:white;
+    border:none;
 
+    padding:15px 45px;
 
-    font-size:18px;
-
+    border-radius:50px;
 
     font-weight:bold;
 
-
     cursor:pointer;
 
+    box-shadow:
 
-    transition:.3s;
+    0 8px 20px rgba(255,193,7,.35);
 
 }
-
 
 
 button:hover{
 
-
-    transform:translateY(-5px) scale(1.05);
-
+    transform:translateY(-5px);
 
 }
-
 
 
 /* =====================
- MOBILE
+   DECORATION
 ===================== */
 
 
-@media(max-width:700px){
+.star{
 
+    color:#FBBF24;
 
-nav{
+    text-shadow:
 
-    flex-wrap:wrap;
-
-    gap:12px;
-
-}
-
-
-nav a{
-
-    font-size:13px;
+    0 0 10px #FFE082;
 
 }
-
-
-
-.profile-box{
-
-    width:90%;
-
-    padding:30px;
-
-}
-
-
-
-.profile{
-
-    width:150px;
-
-    height:150px;
-
-}
-
-
-
-h1{
-
-    font-size:40px;
-
-}
-
-
-}
-
 
 </style>
 
