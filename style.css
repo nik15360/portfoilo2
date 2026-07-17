@@ -1,1 +1,383 @@
+/* ==========================
+   Google Font
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
 
+/* ==========================
+   Reset
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Prompt',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:linear-gradient(
+        180deg,
+        #EAF8FF,
+        #D8F0FF,
+        #CDEBFF,
+        #EAF8FF
+    );
+
+    overflow-x:hidden;
+
+    color:#2B4F6C;
+
+}
+
+/* ==========================
+   Background Animation
+========================== */
+
+.background-animation{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    overflow:hidden;
+
+    z-index:-1;
+
+}
+
+/* ==========================
+   Floating Gears
+========================== */
+
+.gear{
+
+    position:absolute;
+
+    top:-200px;
+
+    color:rgba(255,255,255,.45);
+
+    user-select:none;
+
+    animation:
+        fall linear infinite,
+        spin linear infinite;
+}
+
+.gear1{
+
+    left:5%;
+    font-size:70px;
+    animation-duration:16s,6s;
+}
+
+.gear2{
+
+    left:18%;
+    font-size:120px;
+    animation-duration:20s,10s;
+    animation-delay:2s;
+}
+
+.gear3{
+
+    left:35%;
+    font-size:90px;
+    animation-duration:14s,8s;
+    animation-delay:6s;
+}
+
+.gear4{
+
+    left:50%;
+    font-size:160px;
+    animation-duration:22s,12s;
+    animation-delay:4s;
+}
+
+.gear5{
+
+    left:67%;
+    font-size:85px;
+    animation-duration:15s,7s;
+    animation-delay:8s;
+}
+
+.gear6{
+
+    left:82%;
+    font-size:130px;
+    animation-duration:23s,9s;
+    animation-delay:1s;
+}
+
+.gear7{
+
+    left:92%;
+    font-size:60px;
+    animation-duration:17s,5s;
+    animation-delay:5s;
+}
+
+.gear8{
+
+    left:43%;
+    font-size:190px;
+    animation-duration:28s,15s;
+    animation-delay:10s;
+}
+
+/* ==========================
+   Animation
+========================== */
+
+@keyframes fall{
+
+    from{
+
+        transform:translateY(-250px);
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:.6;
+
+    }
+
+    85%{
+
+        opacity:.4;
+
+    }
+
+    to{
+
+        transform:translateY(120vh);
+
+        opacity:0;
+
+    }
+
+}
+
+@keyframes spin{
+
+    from{
+
+        rotate:0deg;
+
+    }
+
+    to{
+
+        rotate:360deg;
+
+    }
+
+}
+
+/* ==========================
+   Navigation
+========================== */
+
+header{
+
+    width:100%;
+
+    position:sticky;
+
+    top:0;
+
+    background:rgba(168,216,255,.85);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 4px 20px rgba(0,0,0,.08);
+
+    z-index:999;
+
+}
+
+nav{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 30px;
+
+}
+
+.logo{
+
+    color:white;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+}
+
+nav ul li{
+
+    margin-left:30px;
+
+}
+
+nav ul li a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+    color:#0D6EFD;
+
+}
+
+/* ==========================
+   Hero
+========================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+.profile{
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:8px solid white;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.15);
+
+    margin-bottom:30px;
+
+}
+
+.hero h1{
+
+    font-size:60px;
+
+    color:#2C6DAA;
+
+}
+
+.hero h2{
+
+    margin-top:15px;
+
+    font-size:32px;
+
+}
+
+.hero p{
+
+    max-width:750px;
+
+    margin-top:25px;
+
+    font-size:20px;
+
+    color:#466B8B;
+
+}
+
+.btn{
+
+    margin-top:40px;
+
+    padding:15px 45px;
+
+    background:#76C9FF;
+
+    color:white;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+    font-size:18px;
+
+}
+
+.btn:hover{
+
+    background:#2DA6FF;
+
+    transform:translateY(-5px);
+
+}
+
+/* ==========================
+   Footer
+========================== */
+
+footer{
+
+    background:#A8D8FF;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+}
