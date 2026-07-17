@@ -1,21 +1,13 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-
 <style>
-
-/* =====================
- RESET
-===================== */
 
 *{
     margin:0;
@@ -24,612 +16,274 @@
     font-family:'Prompt',sans-serif;
 }
 
-
-
-/* =====================
- BACKGROUND
-===================== */
-
 body{
-
     min-height:100vh;
-
     overflow:hidden;
-
-    background:#eadcff;
-
+    background:#fff9d6;
 }
-
-
 
 /* แสงพาสเทล */
 
 body::before{
-
     content:"";
-
     position:fixed;
-
-    width:400px;
-
-    height:400px;
-
-    background:#fbcfe8;
-
+    width:450px;
+    height:450px;
+    background:#fff3a3;
     border-radius:50%;
-
     filter:blur(120px);
-
     top:-150px;
-
     left:-100px;
-
 }
-
-
 
 body::after{
-
     content:"";
-
     position:fixed;
-
-    width:400px;
-
-    height:400px;
-
-    background:#ddd6fe;
-
+    width:450px;
+    height:450px;
+    background:#ffe082;
     border-radius:50%;
-
     filter:blur(120px);
-
     bottom:-150px;
-
     right:-100px;
-
 }
 
-
-
-/* =====================
- MENU
-===================== */
+/* เมนู */
 
 nav{
-
     position:fixed;
-
     top:20px;
-
     left:50%;
-
     transform:translateX(-50%);
-
-
     width:90%;
-
-
     display:flex;
-
     justify-content:center;
-
     gap:25px;
-
-
     padding:18px;
-
-
-    background:rgba(255,255,255,.45);
-
+    background:rgba(255,255,255,.5);
     backdrop-filter:blur(15px);
-
-
     border-radius:50px;
-
-
-    box-shadow:
-
-    0 10px 30px rgba(0,0,0,.1);
-
-
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
     z-index:10;
-
 }
-
-
 
 nav a{
-
     text-decoration:none;
-
-    color:#7c3aed;
-
+    color:#d4a017;
     font-weight:600;
-
     transition:.3s;
-
 }
-
-
 
 nav a:hover{
-
-    color:#ec4899;
-
+    color:#f59e0b;
 }
 
-
-
-/* =====================
- ดาวตก
-===================== */
-
+/* ดาว */
 
 .star{
-
     position:fixed;
-
     top:-50px;
-
-
-    color:#ffffff;
-
-
-    opacity:.45;
-
-
-    text-shadow:
-
-    0 0 8px white;
-
-
+    color:white;
+    opacity:.6;
+    text-shadow:0 0 8px white;
     animation:fall linear infinite;
-
-
     z-index:1;
-
 }
-
-
 
 @keyframes fall{
-
-
-0%{
-
-    transform:
-
-    translateY(-50px)
-    rotate(0deg);
-
+    from{
+        transform:translateY(-50px) rotate(0deg);
+    }
+    to{
+        transform:translateY(110vh) rotate(360deg);
+    }
 }
 
-
-100%{
-
-    transform:
-
-    translateY(110vh)
-    rotate(360deg);
-
-}
-
-
-}
-
-
-
-/* =====================
- HERO
-===================== */
-
+/* Hero */
 
 .hero{
-
     height:100vh;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
-
     position:relative;
-
     z-index:2;
-
 }
 
-
-
-/* =====================
- PROFILE BOX
-===================== */
-
+/* กล่องโปรไฟล์ */
 
 .profile-box{
-
-
-    width:500px;
-
-
+    width:520px;
     padding:45px;
-
-
     text-align:center;
-
-
-    background:
-
-    rgba(255,255,255,.45);
-
-
+    background:rgba(255,255,255,.5);
     backdrop-filter:blur(20px);
-
-
     border-radius:35px;
-
-
-    box-shadow:
-
-    0 20px 50px rgba(0,0,0,.15);
-
-
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
     animation:show 1s;
-
 }
-
-
 
 @keyframes show{
-
-
-from{
-
-    opacity:0;
-
-    transform:translateY(60px);
-
+    from{
+        opacity:0;
+        transform:translateY(60px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
-
-to{
-
-    opacity:1;
-
-    transform:translateY(0);
-
-}
-
-
-}
-
-
-
-/* =====================
- IMAGE
-===================== */
-
+/* รูป */
 
 .profile{
-
-
     width:200px;
-
-
     height:200px;
-
-
     object-fit:cover;
-
-
     border-radius:50%;
-
-
     border:7px solid white;
-
-
-    box-shadow:
-
-    0 0 30px #f472b6;
-
-
+    box-shadow:0 0 30px #ffd54f;
     animation:float 3s infinite;
-
 }
-
-
 
 @keyframes float{
-
-
-50%{
-
-    transform:translateY(-15px);
-
+    50%{
+        transform:translateY(-15px);
+    }
 }
 
-
-}
-
-
-
-/* =====================
- TEXT
-===================== */
-
+/* ข้อความ */
 
 h1{
-
     margin-top:25px;
-
-
     font-size:60px;
-
-
-    color:#7c3aed;
-
-
+    color:#d4a017;
 }
-
-
 
 h2{
-
-
     margin-top:10px;
-
-
     font-size:30px;
-
-
-    color:#ec4899;
-
-
+    color:#f59e0b;
 }
-
-
 
 p{
-
-
     margin:20px;
-
-
     color:#555;
-
-
     font-size:18px;
-
-
     line-height:1.8;
-
-
 }
 
-
-
-/* =====================
- BUTTON
-===================== */
-
+/* ปุ่ม */
 
 button{
-
-
     padding:15px 45px;
-
-
     border:none;
-
-
     border-radius:50px;
-
-
-    background:
-
-    linear-gradient(
+    background:linear-gradient(
     45deg,
-    #ec4899,
-    #8b5cf6
+    #ffd54f,
+    #ffca28
     );
-
-
     color:white;
-
-
     font-size:18px;
-
-
     font-weight:bold;
-
-
     cursor:pointer;
-
-
     transition:.3s;
-
 }
-
-
 
 button:hover{
-
-
     transform:translateY(-5px) scale(1.05);
-
-
 }
 
-
-
-/* =====================
- MOBILE
-===================== */
-
+/* Responsive */
 
 @media(max-width:700px){
 
+    nav{
+        flex-wrap:wrap;
+        gap:12px;
+    }
 
-nav{
+    nav a{
+        font-size:13px;
+    }
 
-    flex-wrap:wrap;
+    .profile-box{
+        width:90%;
+        padding:30px;
+    }
 
-    gap:12px;
+    .profile{
+        width:150px;
+        height:150px;
+    }
 
+    h1{
+        font-size:40px;
+    }
 }
-
-
-nav a{
-
-    font-size:13px;
-
-}
-
-
-
-.profile-box{
-
-    width:90%;
-
-    padding:30px;
-
-}
-
-
-
-.profile{
-
-    width:150px;
-
-    height:150px;
-
-}
-
-
-
-h1{
-
-    font-size:40px;
-
-}
-
-
-}
-
 
 </style>
-
-
 </head>
-
-
 
 <body>
 
-
-
-<!-- MENU -->
-
 <nav>
-
 <a href="#">หน้าปก</a>
-
 <a href="#">ประวัติส่วนตัว</a>
-
 <a href="#">ประวัติการศึกษา</a>
-
 <a href="#">ผลการเรียน</a>
-
 <a href="#">เกียรติบัตร</a>
-
 <a href="#">กิจกรรม</a>
-
 </nav>
-
-<!-- หน้าปก -->
-
 
 <section class="hero">
 
-
 <div class="profile-box">
 
-
 <img src="images/1783693084905.jpg" class="profile" alt="รูปโปรไฟล์">
-<h1>
-PORTFOLIO
-</h1><h2 id="student-name">
-นางสาวธัญพร โคโตสี
-</h2>
+
+<h1>PORTFOLIO</h1>
+
+<h2>นางสาวธัญพร โคโตสี</h2>
+
 <p>
-นักเรียนชั้นมัธยมศึกษาปีที่ 6
-<br>
-โรงเรียนพานทอง
-<br>
+นักเรียนชั้นมัธยมศึกษาปีที่ 6<br>
+โรงเรียนพานทอง<br>
 แผนการเรียน วิทยาศาสตร์-คณิตศาสตร์
 </p>
+
 <button onclick="location.href='profile.html'">
 เข้าสู่ Portfolio
-
 </button>
-
 
 </div>
 
-
 </section>
-
-
 
 <script>
 
-
-// =====================
-// สร้างดาวตก
-// =====================
-
-
 for(let i=0;i<60;i++){
-
 
 let star=document.createElement("div");
 
-
 star.className="star";
-
 
 star.innerHTML="✦";
 
+star.style.left=Math.random()*100+"vw";
 
-star.style.left=
-Math.random()*100+"vw";
+star.style.fontSize=(10+Math.random()*18)+"px";
 
+star.style.animationDuration=(6+Math.random()*10)+"s";
 
-star.style.fontSize=
-(10+Math.random()*18)+"px";
-
-
-star.style.animationDuration=
-(6+Math.random()*10)+"s";
-
-
-star.style.animationDelay=
-Math.random()*10+"s";
-
+star.style.animationDelay=Math.random()*10+"s";
 
 document.body.appendChild(star);
 
-
 }
-
 
 </script>
 
-
-
 </body>
-
 </html>
