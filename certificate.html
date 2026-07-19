@@ -1,1 +1,258 @@
+<!DOCTYPE html>
+<html lang="th">
 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>เกียรติบัตร</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Prompt',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:#FFFDF2;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    width:350px;
+    height:350px;
+    background:#FFE082;
+    border-radius:50%;
+    filter:blur(120px);
+    top:-100px;
+    left:-100px;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:350px;
+    height:350px;
+    background:#FFF9C4;
+    border-radius:50%;
+    filter:blur(120px);
+    bottom:-100px;
+    right:-100px;
+}
+
+nav{
+    position:fixed;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:90%;
+    padding:18px;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    background:rgba(255,255,255,.45);
+    backdrop-filter:blur(15px);
+    border-radius:50px;
+    z-index:100;
+}
+
+nav a{
+    text-decoration:none;
+    color:#B8860B;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#F9A825;
+}
+
+.star{
+    position:fixed;
+    top:-40px;
+    color:white;
+    opacity:.45;
+    animation:fall linear infinite;
+}
+
+@keyframes fall{
+    from{transform:translateY(-50px);}
+    to{transform:translateY(110vh);}
+}
+
+.container{
+    padding-top:130px;
+    display:flex;
+    justify-content:center;
+    padding-bottom:50px;
+}
+
+.profile-card{
+    width:900px;
+    padding:40px;
+    background:rgba(255,255,255,.45);
+    backdrop-filter:blur(20px);
+    border-radius:35px;
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+    color:#B8860B;
+    font-size:45px;
+}
+
+.data{
+    background:rgba(255,255,255,.55);
+    padding:20px;
+    border-radius:20px;
+}
+
+h2{
+    color:#B8860B;
+    border-bottom:2px solid #F9A825;
+    padding-bottom:8px;
+    margin-bottom:20px;
+}
+
+.certificate-box{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.certificate{
+    background:#fff;
+    padding:15px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.certificate:hover{
+    transform:translateY(-8px);
+}
+
+.certificate img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.certificate p{
+    margin-top:10px;
+    text-align:center;
+    color:#555;
+    line-height:1.7;
+}
+
+.info{
+    margin-top:20px;
+    color:#555;
+    line-height:2;
+}
+
+@media(max-width:700px){
+
+nav{
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+nav a{
+    font-size:13px;
+}
+
+.profile-card{
+    width:90%;
+    padding:25px;
+}
+
+h1{
+    font-size:35px;
+}
+
+.certificate-box{
+    grid-template-columns:1fr;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">หน้าปก</a>
+    <a href="profile.html">ประวัติส่วนตัว</a>
+    <a href="education.html">ประวัติการศึกษา</a>
+    <a href="grade.html">ผลการเรียน</a>
+    <a href="certificate.html">เกียรติบัตร</a>
+    <a href="activity.html">กิจกรรม</a>
+</nav>
+
+<div class="container">
+
+<div class="profile-card">
+
+<h1>เกียรติบัตร</h1>
+
+<div class="data">
+
+<h2>ผลงานและรางวัลที่ได้รับ</h2>
+
+<div class="certificate-box">
+
+<div class="certificate">
+<img src="images/IMG_1657.jpg" alt="">
+<p>เกียรติบัตรที่ 1 แข่งขันประกวดร้องเพลงลูกทุ่ง ได้รับรางวัลรองชนะเลิศอันดับ 2 เมื่อปี 2567 (วันภาษาไทย)</p>
+</div>
+
+<div class="certificate">
+<img src="images/IMG_1656.jpg" alt="">
+<p>เกียรติบัตรที่ 2 แข่งขันประกวดร้องเพลงลูกทุ่ง ได้รับรางวัลชนะเลิศ เมื่อปี 2568 (วันภาษาไทย)</p>
+</div>
+
+<div class="certificate">
+<img src="images/IMG_1655.jpeg" alt="">
+<p>เกียรติบัตรที่ 3 แข่งขันคิดเลขเร็ว ได้รับรางวัลรองชนะเลิศอันดับ 2 เมื่อปี 2568 (วันวิทยาศาสตร์)</p>
+</div>
+
+</div>
+
+<h2 style="margin-top:35px;">รายละเอียดเพิ่มเติม</h2>
+
+<p class="info">
+• เข้าร่วมกิจกรรมและการแข่งขันในโรงเรียน<br>
+• ได้รับประสบการณ์จากการทำกิจกรรมต่าง ๆ
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+for(let i=0;i<40;i++){
+    let star=document.createElement("div");
+    star.className="star";
+    star.innerHTML="✦";
+    star.style.left=Math.random()*100+"vw";
+    star.style.fontSize=(10+Math.random()*15)+"px";
+    star.style.animationDuration=(7+Math.random()*8)+"s";
+    star.style.animationDelay=Math.random()*5+"s";
+    document.body.appendChild(star);
+}
+</script>
+
+</body>
+</html>
